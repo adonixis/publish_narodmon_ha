@@ -1,0 +1,50 @@
+{
+  "title": "Publish Narodmon",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Publish Narodmon",
+        "description": "Publish Home Assistant sensor readings to [Narodmon](https://narodmon.ru).",
+        "data": {
+          "device_mac": "Device MAC address",
+          "device_name": "Device name (optional)",
+          "coordinates_entity": "Coordinates entity (optional)",
+          "sensors": "Sensors to publish",
+          "send_interval_changed": "Send interval after changes (seconds)",
+          "send_interval_force": "Force send interval (seconds)"
+        },
+        "data_description": {
+          "device_mac": "MAC address of your Narodmon device, e.g. AA:BB:CC:DD:EE:FF",
+          "device_name": "Display name on the Narodmon map",
+          "coordinates_entity": "Entity with latitude and longitude attributes (e.g. zone.home, person)",
+          "sensors": "Sensor entities whose values will be sent to Narodmon",
+          "send_interval_changed": "Minimum delay before sending after sensor values change (default: 360)",
+          "send_interval_force": "Maximum time between sends even if nothing changed (default: 1200)"
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigure Publish Narodmon",
+        "description": "Update sensors and send intervals for this Narodmon device.",
+        "data": {
+          "device_mac": "Device MAC address",
+          "device_name": "Device name (optional)",
+          "coordinates_entity": "Coordinates entity (optional)",
+          "sensors": "Sensors to publish",
+          "send_interval_changed": "Send interval after changes (seconds)",
+          "send_interval_force": "Force send interval (seconds)"
+        }
+      }
+    },
+    "error": {
+      "invalid_mac": "Invalid MAC address format.",
+      "sensors_required": "Select at least one sensor.",
+      "entity_not_found": "One or more selected entities were not found.",
+      "mac_change_not_allowed": "MAC address cannot be changed. Remove the entry and add it again.",
+      "invalid_intervals": "Force send interval must be greater than the change send interval."
+    },
+    "abort": {
+      "already_configured": "A device with this MAC address is already configured.",
+      "reconfigure_successful": "Configuration updated successfully."
+    }
+  }
+}
