@@ -2,5 +2,6 @@
     "name": "Publish Narodmon",
     "content_in_root": false,
     "homeassistant": "2024.1.0",
-    "hacs": "2.0.5"
+    "hacs": "2.0.5",
+    "country": ["RU"]
 }
