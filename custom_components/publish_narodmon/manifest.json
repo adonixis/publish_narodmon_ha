@@ -1,0 +1,11 @@
+{
+  "domain": "publish_narodmon",
+  "name": "Publish Narodmon",
+  "codeowners": ["@adonixis"],
+  "config_flow": true,
+  "documentation": "https://github.com/adonixis/publish_narodmon_ha",
+  "iot_class": "cloud_push",
+  "issue_tracker": "https://github.com/adonixis/publish_narodmon_ha/issues",
+  "loggers": ["custom_components.publish_narodmon"],
+  "version": "1.0.0"
+}

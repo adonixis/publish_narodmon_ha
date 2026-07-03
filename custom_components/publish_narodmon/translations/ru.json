@@ -1,0 +1,50 @@
+{
+  "title": "Publish Narodmon",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Publish Narodmon",
+        "description": "Публикация показаний сенсоров Home Assistant в [Народный мониторинг](https://narodmon.ru).",
+        "data": {
+          "device_mac": "MAC-адрес устройства",
+          "device_name": "Имя устройства (необязательно)",
+          "coordinates_entity": "Сущность с координатами (необязательно)",
+          "sensors": "Сенсоры для отправки",
+          "send_interval_changed": "Интервал отправки после изменений (сек)",
+          "send_interval_force": "Принудительный интервал отправки (сек)"
+        },
+        "data_description": {
+          "device_mac": "MAC-адрес устройства Narodmon, например AA:BB:CC:DD:EE:FF",
+          "device_name": "Отображаемое имя на карте Narodmon",
+          "coordinates_entity": "Сущность с атрибутами latitude и longitude (например zone.home, person)",
+          "sensors": "Сенсоры, показания которых будут отправляться в Narodmon",
+          "send_interval_changed": "Минимальная задержка перед отправкой после изменения значений (по умолчанию: 360)",
+          "send_interval_force": "Максимальное время между отправками, даже если данные не менялись (по умолчанию: 1200)"
+        }
+      },
+      "reconfigure": {
+        "title": "Перенастройка Publish Narodmon",
+        "description": "Изменение сенсоров и интервалов отправки для этого устройства.",
+        "data": {
+          "device_mac": "MAC-адрес устройства",
+          "device_name": "Имя устройства (необязательно)",
+          "coordinates_entity": "Сущность с координатами (необязательно)",
+          "sensors": "Сенсоры для отправки",
+          "send_interval_changed": "Интервал отправки после изменений (сек)",
+          "send_interval_force": "Принудительный интервал отправки (сек)"
+        }
+      }
+    },
+    "error": {
+      "invalid_mac": "Неверный формат MAC-адреса.",
+      "sensors_required": "Выберите хотя бы один сенсор.",
+      "entity_not_found": "Одна или несколько выбранных сущностей не найдены.",
+      "mac_change_not_allowed": "MAC-адрес нельзя изменить. Удалите запись и создайте новую.",
+      "invalid_intervals": "Принудительный интервал должен быть больше интервала после изменений."
+    },
+    "abort": {
+      "already_configured": "Устройство с таким MAC-адресом уже настроено.",
+      "reconfigure_successful": "Настройки успешно обновлены."
+    }
+  }
+}
